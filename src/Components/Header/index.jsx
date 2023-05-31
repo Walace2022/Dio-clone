@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container,Row,Column,Wrapper,BuscarInputContainer,Menu,MenuRight,UserPicture,Input } from './styles';
 import { Button } from '../Button';
-import Logo from '../../assets/img/logo.png'
+import Logo from '../../assets/img/logo-dio.svg';
 
 const Header = () => {
   return (
