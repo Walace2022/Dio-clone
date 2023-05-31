@@ -39,7 +39,11 @@ export const BuscarInputContainer = styled.div`
     background:#2D2D37;
     border-radius: 8px;
     padding: 2px 5px;
-    margin:0 12px
+    margin:0 12px;
+
+    display:flex;
+    align-items:center;
+    justify-contents:center;
 `
 export const Menu = styled.a`
     font-family: 'Open Sans';
