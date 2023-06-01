@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Button } from "../../Components/Button";
 import {Header} from "../../Components/Header";
 import { Container, TextContent, Title, TitleHighlight} from './styles';
