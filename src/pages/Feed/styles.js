@@ -9,33 +9,33 @@ export const Container = styled.main`
     display:flex;
     flex-direction:row;
     justify-content:space-between;
-    align-items: center;
+    
 `
 
-export const Title = styled.h2`
+export const Title = styled.h3`
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight:700;
-    font-size:32px;
-    width:320px;
-    line-height:44px;
-    margin-bottom:20px;
+    font-size:18px;
+    line-height:25px;
+    margin-bottom:24px;
 
     color:#fff;
 `
 
-export const TitleHighlight = styled.span`
-    color:#E4105D;
+export const TitleHighlight = styled.h3`
+font-family: 'Open Sans', sans-serif;
+font-style: normal;
+font-weight:700;
+font-size:18px;
+line-height:25px;
+margin-bottom:24px;
+
+color:#ffffff70;
 `
 
-export const TextContent = styled.p`
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight:400;
-    font-size:16px;
-    width:420px;
-    line-height:22px;
-    margin-bottom:20px;
+export const Column = styled.div`
+    flex:${({flex}) => flex};
+    padding-right: 24px;
 
-    color:#fff;
 `

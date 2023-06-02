@@ -1,14 +1,28 @@
-import { Button } from "../../Components/Button";
 import {Header} from "../../Components/Header";
-import { Container, TextContent, Title, TitleHighlight} from './styles';
+import { Container, Column, Title, TitleHighlight} from './styles';
 import { Card } from "../../Components/Card";
+import { UserInfo } from "../../Components/UserInfo";
 
 const Feed = () =>{
     return(
         <>
             <Header />
             <Container>
-               <Card />             
+                <Column flex={3}>
+                    <Title>Feed</Title>
+                    <Card />   
+                    <Card />   
+                    <Card />   
+                    <Card />   
+                </Column>
+                <Column flex={1}>
+                    <TitleHighlight># Rankig Top 5 Semanal</TitleHighlight>
+                    <UserInfo nome="Henrique Walace" percentual={35} />          
+                    <UserInfo nome="Henrique Walace" percentual={35} />          
+                    <UserInfo nome="Henrique Walace" percentual={35} />          
+                    <UserInfo nome="Henrique Walace" percentual={35} />          
+                    <UserInfo nome="Henrique Walace" percentual={35} />          
+                </Column>
             </Container>
         </>
     )
