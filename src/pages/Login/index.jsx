@@ -5,9 +5,15 @@ import { Input } from "../../Components/Input";
 import EmailIcon from "../../assets/img/email.svg";
 import PasswordIcon from "../../assets/img/password.svg";
 import { Container, Title, Column, CriarText, Row, EsqueciText, SubtitleLogin, TitleLogin, Wrapper} from './styles';
-
+import { useNavigate } from "react-router-dom";
 
 const Login = () =>{
+    const navigate = useNavigate();
+
+    const handleclickLogin = () => {
+        navigate('/feed');
+    }
+
     return(
         <>
             <Header />
@@ -24,7 +30,7 @@ const Login = () =>{
                     <form action="">
                         <Input placeholder="E-mail" leftIcon={EmailIcon} />
                         <Input placeholder="Senha" type="password" leftIcon={PasswordIcon}/>
-                        <Button title="Entrar" variant="secondary" />   
+                        <Button title="Entrar" variant="secondary" onClick={handleclickLogin} />   
                     </form>
                     <Row>
                     <EsqueciText>Esqueci minha senha</EsqueciText>
