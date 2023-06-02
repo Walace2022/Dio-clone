@@ -22,7 +22,7 @@ const Login = () =>{
                     <TitleLogin>Faça seu cadastro</TitleLogin>
                     <SubtitleLogin>Faça seu login e make the change._</SubtitleLogin>
                     <form action="">
-                        <Input placeholder="E-mail" leftIcon={EmailIcon}/>
+                        <Input placeholder="E-mail" leftIcon={EmailIcon} />
                         <Input placeholder="Senha" type="password" leftIcon={PasswordIcon}/>
                         <Button title="Entrar" variant="secondary" />   
                     </form>
