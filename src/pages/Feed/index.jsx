@@ -6,7 +6,7 @@ import { UserInfo } from "../../Components/UserInfo";
 const Feed = () =>{
     return(
         <>
-            <Header />
+            <Header autenticado={true} />
             <Container>
                 <Column flex={3}>
                     <Title>Feed</Title>
@@ -17,10 +17,10 @@ const Feed = () =>{
                 </Column>
                 <Column flex={1}>
                     <TitleHighlight># Rankig Top 5 Semanal</TitleHighlight>
-                    <UserInfo nome="Henrique Walace" percentual={35} />          
-                    <UserInfo nome="Henrique Walace" percentual={35} />          
-                    <UserInfo nome="Henrique Walace" percentual={35} />          
-                    <UserInfo nome="Henrique Walace" percentual={35} />          
+                    <UserInfo nome="Henrique Walace" percentual={5} />          
+                    <UserInfo nome="Henrique Walace" percentual={65} />          
+                    <UserInfo nome="Henrique Walace" percentual={45} />          
+                    <UserInfo nome="Henrique Walace" percentual={15} />          
                     <UserInfo nome="Henrique Walace" percentual={35} />          
                 </Column>
             </Container>

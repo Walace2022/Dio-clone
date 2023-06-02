@@ -3,22 +3,34 @@ import { Container,Row,Column,Wrapper,BuscarInputContainer,Menu,MenuRight,UserPi
 import { Button } from '../Button';
 import Logo from '../../assets/img/logo-dio.svg';
 
-const Header = () => {
+const Header = ({autenticado}) => {
   return (
     <Wrapper>
         <Container>
             <Row>
-                <img src={Logo} alt="Logo da DIO" />   
-                <BuscarInputContainer>
+                <img src={Logo} alt="Logo da DIO" />
+                {autenticado ? (
+                    <>
+                    <BuscarInputContainer>
                     <Input placeholder='Buscar...' />
-                </BuscarInputContainer> 
-                <Menu>Live Code</Menu>
-                <Menu>Global</Menu>
+                    </BuscarInputContainer> 
+                    <Menu>Live Code</Menu>
+                    <Menu>Global</Menu>
+                    </>
+                ) : null}   
             </Row>
             <Row>
-                <MenuRight href='#'>Home</MenuRight>
-                <Button title="Entrar" />
-                <Button title="Cadastrar" />
+                {autenticado ? ( 
+                <>
+                <UserPicture />
+                </>
+                ) : (
+                    <>
+                    <MenuRight href='#'>Home</MenuRight>
+                    <Button title="Entrar" />
+                    <Button title="Cadastrar" />
+                    </>
+                )}
             </Row>
         </Container>
     </Wrapper>
