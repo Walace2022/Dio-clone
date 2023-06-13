@@ -1,9 +1,19 @@
 import React from 'react'
-import { Container,Row,Column,Wrapper,BuscarInputContainer,Menu,MenuRight,UserPicture,Input } from './styles';
-import { Button } from '../Button';
+
+import { Container,Row,Wrapper,BuscarInputContainer,Menu,MenuRight,UserPicture,Input } from './styles';
 import Logo from '../../assets/img/logo-dio.svg';
 
+import { Button } from '../Button';
+import { useNavigate } from "react-router-dom";
+
 const Header = ({autenticado}) => {
+    const navigate = useNavigate();
+    const goToLogin = () =>{
+        navigate('/login')
+    }
+    const goToSignUp = () => {
+        navigate('/signup')
+    }
   return (
     <Wrapper>
         <Container>
@@ -27,8 +37,8 @@ const Header = ({autenticado}) => {
                 ) : (
                     <>
                     <MenuRight href='#'>Home</MenuRight>
-                    <Button title="Entrar" />
-                    <Button title="Cadastrar" />
+                    <Button title="Entrar" onClick={goToLogin}/>
+                    <Button title="Cadastrar" onClick={goToSignUp}/>
                     </>
                 )}
             </Row>
