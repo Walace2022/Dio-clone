@@ -16,18 +16,20 @@ const schema = yup.object({
 }).required();
 
 const Login = () =>{
-    const { control, handleSubmit, formState: { errors, isValid } } = useForm({
+    const navigate = useNavigate();
+
+    const { control, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
         mode: 'onChange'
     });
     
-    const onSubmit = data => console.log(data);
-
-    const navigate = useNavigate();
-
-    const handleclickLogin = () => {
+    const onSubmit = data => {
+        console.log(data);
         navigate('/feed');
     }
+
+
+    
 
     return(
         <>
