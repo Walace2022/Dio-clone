@@ -6,8 +6,23 @@ import EmailIcon from "../../assets/img/email.svg";
 import PasswordIcon from "../../assets/img/password.svg";
 import { Container, Title, Column, CriarText, Row, EsqueciText, SubtitleLogin, TitleLogin, Wrapper} from './styles';
 import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
+
+const schema = yup.object({
+  email: yup.string().email('Email nao e valido.').required('Campo Obrigatorio.'),
+  password: yup.string().min(3, 'No minimo 3 caracteres.').required('Campo Obrigatorio.'),
+}).required();
 
 const Login = () =>{
+    const { control, handleSubmit, formState: { errors, isValid } } = useForm({
+        resolver: yupResolver(schema),
+        mode: 'onChange'
+    });
+    
+    const onSubmit = data => console.log(data);
+
     const navigate = useNavigate();
 
     const handleclickLogin = () => {
@@ -27,10 +42,10 @@ const Login = () =>{
                 <Wrapper>
                     <TitleLogin>Faça seu cadastro</TitleLogin>
                     <SubtitleLogin>Faça seu login e make the change._</SubtitleLogin>
-                    <form action="">
-                        <Input placeholder="E-mail" leftIcon={EmailIcon} />
-                        <Input placeholder="Senha" type="password" leftIcon={PasswordIcon}/>
-                        <Button title="Entrar" variant="secondary" onClick={handleclickLogin} />   
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <Input name="email" control={control} errorMessage={errors?.email?.message} placeholder="E-mail" leftIcon={EmailIcon} />
+                        <Input name="password" control={control} errorMessage={errors?.password?.message} placeholder="Senha" type="password" leftIcon={PasswordIcon}/>
+                        <Button title="Entrar" variant="secondary" type="submit" />   
                     </form>
                     <Row>
                     <EsqueciText>Esqueci minha senha</EsqueciText>
