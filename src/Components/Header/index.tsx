@@ -5,8 +5,9 @@ import Logo from '../../assets/img/logo-dio.svg';
 
 import { Button } from '../Button';
 import { useNavigate } from "react-router-dom";
+import { IHeader } from './types';
 
-const Header = ({autenticado}) => {
+const Header = ({autenticado} : IHeader) => {
     const navigate = useNavigate();
     const goToLogin = () =>{
         navigate('/login')
@@ -37,8 +38,8 @@ const Header = ({autenticado}) => {
                 ) : (
                     <>
                     <MenuRight href='#'>Home</MenuRight>
-                    <Button title="Entrar" onClick={goToLogin}/>
-                    <Button title="Cadastrar" onClick={goToSignUp}/>
+                    <Button  title="Entrar" onClick={goToLogin}/>
+                    <Button  title="Cadastrar" onClick={goToSignUp}/>
                     </>
                 )}
             </Row>

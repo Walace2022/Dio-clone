@@ -7,6 +7,7 @@ import { Home } from './pages/Home';
 import { Login } from './pages/Login';
 import { Feed } from './pages/Feed';
 import { SignUp } from './pages/SignUp';
+import React from 'react';
 
 function App() {
   return (

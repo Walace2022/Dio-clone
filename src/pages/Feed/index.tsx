@@ -1,3 +1,4 @@
+import React from "react";
 import {Header} from "../../Components/Header";
 import { Container, Column, Title, TitleHighlight} from './styles';
 import { Card } from "../../Components/Card";

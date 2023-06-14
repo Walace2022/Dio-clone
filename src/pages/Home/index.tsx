@@ -3,6 +3,7 @@ import {Header} from "../../Components/Header";
 import { Container, TextContent, Title, TitleHighlight} from './styles';
 import Banner from '../../assets/img/banner.png'
 import { useNavigate } from "react-router-dom";
+import React from "react";
 
 const Home = () =>{
     const navigate = useNavigate();
