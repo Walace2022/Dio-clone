@@ -38,7 +38,7 @@ export const Progress = styled.div<IUserInfoStyled>`
         position: absolute;
         top: 0;
         left: 0;
-        width: ${({percentual}) => percentual}%;
+        width: ${({percentual} : IUserInfoStyled) => percentual}%;
         height: 6px;
         border-radius:3px;
         background-color:#23DD7A;

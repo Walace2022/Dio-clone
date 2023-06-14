@@ -36,7 +36,7 @@ color:#ffffff70;
 `
 
 export const Column = styled.div<IColumn>`
-    flex:${({flex}) => flex};
+    flex:${({flex} : IColumn) => flex};
     padding-right: 24px;
 
 `

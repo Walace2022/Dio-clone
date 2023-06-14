@@ -28,7 +28,7 @@ const SignUp =() => {
         mode: 'onChange'
     });
     
-    const onSubmit = data => {
+    const onSubmit = (data: any) => {
         console.log(data);
         navigate('/feed');
     }
